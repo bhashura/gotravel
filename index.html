@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GO TRAVEL</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/GoTravelCss.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>&nbsp;G<img src="assets/img/common/gif1.gif" width="45" height="45"> TRAVEL</h1>
+            <ul id="menu-bar">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="location.html">LOCATIONS</a></li>
+                <li><a href="about_us.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li style="margin-left: 500px;background:gray !important;"><input type="search"/><input id="b01" type="submit" value="SEARCH"/></li>
+            </ul>
+			</div>
+        <div style="background: url(./assets/img/location_background/1.jpg) no-repeat center center fixed; 
+             -webkit-background-size: cover;
+             -moz-background-size: cover;
+             -o-background-size: cover;
+             background-size: cover;height: 800px">
+
+            <img class="mySlides" src="assets/img/home_page_slider/1.jpg" style="width:100%;height:80%">
+            <img class="mySlides" src="assets/img/home_page_slider/2.jpg" style="width:100%;height:80%">
+            <img class="mySlides" src="assets/img/home_page_slider/3.jpg" style="width:100%;height:80%">
+            <img class="mySlides" src="assets/img/home_page_slider/4.jpg" style="width:100%;height:80%">
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+            <div style="height: 150px;">
+                <center>
+                    <input type="search" placeholder="example@gmail.com" style="margin-top: 50px;height: 50px;width: 300px;border-radius: 10px !important;"/><input type="submit" value="SUBSCRIBE" style="height: 50px;width: 100px;border-radius: 10px !important;;background: blue;color: white"/>
+                </center>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td width="25%" height="300">
+                            <img src="assets/img/home_page_gif/1.gif" width="400" height="280">
+                        </td>
+                        <td width="25%" height="300">
+                            <img src="assets/img/home_page_gif/2.gif" width="400" height="280">
+                        </td>
+                        <td width="25%" height="300">
+                            <img src="assets/img/home_page_gif/3.gif" width="400" height="280">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+    <script>
+        //image slider time set every 5 seconds
+        setInterval(myMethod, 5000);
+        function myMethod() {
+            plusDivs(1);
+        }
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = x.length;
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</html>
+
